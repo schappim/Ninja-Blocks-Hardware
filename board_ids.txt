@@ -6,7 +6,9 @@
 # My inital thought is that it makes sense to standardise (make constant) one of the values, so that it's always Rc/Rid
 
 # Special IDs : 0V and 5V should be reserved.  0V means nothing is plugged in, and 5V is ignored, but prolly means a problem that can be flagged to the User
-# In terms of reserving these IDs, I think a sensible approach will be to divide and conquer, so that we don't need to be too picky about values.
+# In terms of reserving these IDs, I think a sensible approach will be to divide and conquer, so that we don't need to be too picky about values*.
+
+# * Even taking Mark's point about premature cost cutting onboard it would be prohibitive to use super accurate resistor values.. 
 
 # NOTE: The 'show your work' part of this is in a .numbers file.  What is provided here is the result of that work.
 
@@ -17,8 +19,13 @@
 # 3. IDs will be allocated on a divide and conquer basis
 
 ID, Volts, Name
-0,0,RESERVED- No Board Connected
-128,
-255,5,RESERVED- Some Weird Problem
+0,  0.000,RESERVED- No Board Connected
+32, 0.627,Distance Sensor
+64, 1.215,PIR Sensor
+96, 1.882,Ambient Light Sensor
+128,2.509,Humidity Sensor
+160,3.137,Sound Sensor
+192,3.764,Push Sensor
+255,5.000,RESERVED- Some Weird Problem
 
 
