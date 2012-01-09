@@ -8,24 +8,17 @@
 # Special IDs : 0V and 5V should be reserved.  0V means nothing is plugged in, and 5V is ignored, but prolly means a problem that can be flagged to the User
 # In terms of reserving these IDs, I think a sensible approach will be to divide and conquer, so that we don't need to be too picky about values.
 
-# Having said this, it would be nice to establish if a resolution of 256 ids is easily achievable with standard, cheap, 5% tolerance resistors.
+# NOTE: The 'show your work' part of this is in a .numbers file.  What is provided here is the result of that work.
 
-# From this point on, this file is a lovely CSV
+# Here's the thinking, one more time, from the top:
 
-# id, volts, name
-0,0,No Board Connected
-1,
-2,
-3,
-4,
-5,
-6,
-7,
-8,
-9,
-10,
-11,
-12,
-13,
-14,
-15,
+# 1. The upper limit on sense ability is 1024 values.
+# 2. There will be an absolute upper limit of IDs of 256.
+# 3. IDs will be allocated on a divide and conquer basis
+
+ID, Volts, Name
+0,0,RESERVED- No Board Connected
+128,
+255,5,RESERVED- Some Weird Problem
+
+
